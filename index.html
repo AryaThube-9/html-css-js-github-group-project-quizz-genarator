@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>quizz</title>
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
     <header>
@@ -14,13 +15,92 @@
 
                <div class="menu-btn" id="menu-btn"><img src="./images/humbergear-menu.svg" height="30px"></div>
            
-            <div class="nav-links"><a>Home</a>
+           <div class="nav-links" id="links"><a>Home</a>
             <a>Categories</a>
             <a>leaderboard</a> </div>
-           <div class="login-button-contaner"> <button type="button" class="login-btn"><a>login</a></button>
+           <div class="login-button-contaner" > <button type="button" class="login-btn" id="logn-btn"><a>login</a></button>
             <button type="button" class="singup-btn"><a>sign up</a></button></div></div>
+
+            <!--mobile menu-->
+            <div class="mobile-menu" id="mbl-menu">
+                <a>Home</a>
+            <a>Categories</a>
+            <a>leaderboard</a>
+
+            <button id="logn-btn">Login</button>
+            <button>Sign up</button>
+            </div>
        
     </header><hr>
+
+    <!--login  modal code-->
+    <div class="modal" id="lgn-modal">
+         
+        <div class="modal-ctn">
+              <span  class="close" id="close-lgn">&times;</span>
+          
+             <div class="form-img">
+            <img src="./images/login-img.svg" height="300px">
+        </div>
+         
+            <form id="login-form">
+            
+             <h2>Login</h2>
+            <label for="login-email">Enter Email</label> <br>
+
+        <input type="text" placeholder="Enter your Email" id="login-email"><br>
+
+        <label for="lgn-pswrd">Password</label><br>
+        <input type="password" placeholder="Password" id="lgn-pswrd"><br>
+        <button type="submit">Login</button>
+       
+    </form>
+        </div>
+    </div>
+
+    <!--signup btn code-->
+    <div class="modal" id="signup-modal">
+        <div class="modal-ctn">
+            <span>&times;</span>
+            <div>
+                <img src="./images/signup-img.svg" height="200px">
+            </div>
+        </div>
+    </div>
+    <!--hero-section-->
+    <div class="imag-text-btn-box">
+        <div><h2 class="h2-head">Test your knowldeg,<br><span class="color-text"> challenge your self!!</span></h2>
+        <p class="short-para">play quizzes improve skills and <br>compete with the best.</p>
+    <button type="button" id="start-quizz">Start Quizz</button></div>
+        
     
+    <div class="">
+        <img src="./images/hero-section-img.svg" height="450px">
+    </div>
+    </div>
+    <script>
+        const menubtn =document.getElementById("menu-btn");
+        const navlinks =document.getElementById("mbl-menu");
+
+        menubtn.addEventListener("click",() =>{
+            navlinks.classList.toggle("active");
+        });
+
+       
+        const loginbtn =document.getElementById("logn-btn");
+        const loginmodal =document.getElementById("lgn-modal");
+        const close =document.getElementById("close-lgn");
+
+       
+        
+        
+        loginbtn.addEventListener("click",()=>{
+        loginmodal.style.display="block";
+    });
+
+    close.addEventListener("click",()=>{
+        loginmodal.style.display="none";
+    });
+    </script>
 </body>
 </html>

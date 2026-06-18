@@ -65,32 +65,66 @@ body {
    display: none;
 
 }
+.mobile-menu{
+   display: none;
+}
 
 @media (max-width:768px) {
 
    .menu-btn {
       display: block;
    }
+<<<<<<< HEAD
 
    .nav-links {
+=======
+   
+   .nav-links{
+>>>>>>> 298891648b29ce31acdcbb7b4d5ec21e7dd06d6b
       display: none;
-      position: absolute;
-      top: 80px;
-      left: 0;
-      width: 100%;
-      flex-direction: column;
-      padding: 20px;
    }
+<<<<<<< HEAD
 
    .login-button-contaner {
-      flex-direction: column;
-      width: 100%;
+=======
+   .login-button-contaner{
+      display: none;
    }
 
+   .mobile-menu.active{
+      display: flex;
+>>>>>>> 298891648b29ce31acdcbb7b4d5ec21e7dd06d6b
+      flex-direction: column;
+      align-items: start;
+    
+      gap: 15px;
+      color: white;
+   }
+
+<<<<<<< HEAD
    .main-box-navbar {
 
       flex-wrap: wrap;
 
    }
+=======
+ 
+}
+.modal{
+   display: ;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.7);
+ 
+   
+}
+.modal-ctn{
+   width: 350px;
+   background-color:white;
+   padding: 25PX;
+>>>>>>> 298891648b29ce31acdcbb7b4d5ec21e7dd06d6b
 
 }

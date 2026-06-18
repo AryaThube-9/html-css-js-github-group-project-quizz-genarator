@@ -1,0 +1,55 @@
+.subjects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+body{
+    background-color: black;
+
+}
+
+.card{
+    background-color: rgb(92, 16, 142);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #c3c6d7;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    height: 200px;
+    width: 250px;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card img{
+    width: 100px;      
+    height: 100px;   
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.card h3{
+    font-size: 18px;
+    color: #004ac6;
+}
+.start-btn{
+    margin-top: 1px;
+    padding: 10px 20px;
+    background-color: #004ac6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: 0.3s;
+}
+
+.start-btn:hover{
+    background-color: #003399;
+}
