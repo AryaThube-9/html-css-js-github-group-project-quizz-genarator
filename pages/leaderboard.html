@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <!-- leader board-->
+
     <div class="container">
 
         <h1>🏆 Quiz Generator Leaderboard</h1>
@@ -30,8 +32,49 @@
 
     </div>
 
+    <!-- Quiz result data -->
+    <div class="result-card">
+
+        <div class="trophy">🏆</div>
+
+        <h1>Great Job!</h1>
+
+        <div class="score" id="score">0%</div>
+
+        <div class="stats">
+
+            <div>
+                <h2 id="correct">0</h2>
+                <p>Correct</p>
+            </div>
+
+            <div>
+                <h2 id="wrong">0</h2>
+                <p>Wrong</p>
+            </div>
+
+            <div>
+                <h2 id="total">0</h2>
+                <p>Total</p>
+            </div>
+
+        </div>
+
+        <div class="rank-box">
+            <h2 id="rank">#0</h2>
+            <p>Your Rank</p>
+        </div>
+
+        <button class="btn" onclick="goHome()">
+            Back To Home
+        </button>
+
+    </div>
+
+    <!-- My Profile data -->
+
     <script>
-        //LeaderBoard data//
+        // Leaderboard Logic
 
         // Demo Players Data
 
@@ -92,19 +135,19 @@
             }
 
             tbody.innerHTML += `
-<tr>
-<td class="top">${rank}</td>
-<td>${player.name}</td>
-<td>${player.score}</td>
-</tr>
-`;
+    <tr>
+        <td class="top">${rank}</td>
+        <td>${player.name}</td>
+        <td>${player.score}</td>
+    </tr>
+    `;
 
         });
 
-        //Quiz result data//
+        //Quiz result data 
 
-        //Profile data//
 
+        //Profile data
     </script>
 
 </body>
