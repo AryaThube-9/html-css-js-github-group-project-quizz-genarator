@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>quizz</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
+    <header>
+        <div class="main-box-navbar">
+           
+               <div class="logo-contaner"> <span>Quizz Master</span></div>
+
+               <div class="menu-btn" id="menu-btn"><img src="./images/humbergear-menu.svg" height="30px"></div>
+           
+           <div class="nav-links" id="links"><a>Home</a>
+            <a>Categories</a>
+            <a>leaderboard</a> </div>
+           <div class="login-button-contaner" > <button type="button" class="login-btn"><a>login</a></button>
+            <button type="button" class="singup-btn"><a>sign up</a></button></div></div>
+
+            <!--mobile menu-->
+            <div class="mobile-menu" id="mbl-menu">
+                <a>Home</a>
+            <a>Categories</a>
+            <a>leaderboard</a>
+
+            <button>Login</button>
+            <button>Sign up</button>
+            </div>
+       
+    </header><hr>
+    <!--hero-section-->
+    <div class="imag-text-btn-box">
+        <div><h2 class="h2-head">Test your knowldeg,<br><span class="color-text"> challenge your self!!</span></h2>
+        <p class="short-para">play quizzes improve skills and <br>compete with the best.</p></div>
+        
     
+    <div class="">
+        <img src="./images/hero-section-img.svg" height="450px">
+    </div>
+    </div>
+    <script>
+        const menubtn =document.getElementById("menu-btn");
+        const navlinks =document.getElementById("mbl-menu");
+
+        menubtn.addEventListener("click",() =>{
+            navlinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>

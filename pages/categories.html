@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Clarity Dashboard</title>
+    <link rel="stylesheet" href="./../css/demo.css">
+</head>
+
+<body>
+
+    <h1>Academic Clarity Dashboard</h1>
+
+    <div class="subjects">
+
+        <div class="subjects">
+
+            <div class="card" onclick="showSubject('UPSC')">
+                <img src="./../images/UPSC.png" alt="UPSC">
+                <h3>UPSC</h3>
+            </div>
+
+            <div class="card" onclick="showSubject('NEET')">
+                <img src="./../images/doctor.png" alt="NEET">
+                <h3>NEET</h3>
+            </div>
+
+            <div class="card" onclick="showSubject('bank')">
+                <img src="./../images/bank.png" alt="bank">
+                <h3>bank</h3>
+            </div>
+
+            <div class="card" onclick="showSubject('RAILWAY')">
+                <img src="./../images/railway.png" alt="RAILWAY">
+                <h3>RAILWAY</h3>
+            </div>
+
+            <div class="card" onclick="showSubject('Computer Science')">
+                <img src="./../images/COMPUTER.png" alt="Computer Science">
+                <h3>Computer Science</h3>
+            </div>
+
+            <div class="card" onclick="showSubject('NDA')">
+                <img src="./../images/NDA.png" alt="NDA">
+                <h3>NDA</h3>
+            </div>
+
+        </div>
+        <p id="subjectInfo">Click any subject card to view details.</p>
+
+        <script>
+            function showSubject(subject) {
+
+                const info = document.getElementById("subjectInfo");
+
+                if (subject === "UPSC") {
+                    info.innerText =
+                        "UPSC: Civil Services Exam preparation for IAS, IPS and IFS.";
+                }
+
+                else if (subject === "NEET") {
+                    info.innerText =
+                        "NEET: Medical entrance exam for MBBS, BDS and other courses.";
+                }
+
+                else if (subject === "JEE") {
+                    info.innerText =
+                        "JEE: Engineering entrance exam for IITs, NITs and IIITs.";
+                }
+
+                else if (subject === "RAILWAY") {
+                    info.innerText =
+                        "Railway: Preparation for RRB NTPC, Group D and Technical exams.";
+                }
+
+                else if (subject === "Computer Science") {
+                    info.innerText =
+                        "Computer Science: HTML, CSS, JavaScript, Programming and DSA.";
+                }
+
+                else if (subject === "NDA") {
+                    info.innerText =
+                        "NDA: National Defence Academy entrance exam preparation.";
+                }
+            }
+        </script>
+
+</body>
+
+</html>
