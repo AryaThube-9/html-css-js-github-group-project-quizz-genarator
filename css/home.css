@@ -380,5 +380,14 @@
     .why-card p {
         font-size: 0.95rem;
     }
+@media  (max-width: 320px){
+    
+
+    .stats-heading,.why-heading,.category-heading{
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+}
 
 }
