@@ -19,7 +19,7 @@
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
             <label for="menu-toggle" class="humburger">
-                <img src="./images/humbergear-menu.svg" alt="menu">
+                <img src="../images/humbergear-menu.svg" alt="menu">
             </label>
 
             <div class="nav-links" id="links"><a href="../pages/dashboard.html" id="dashboard-link">Dashboard</a>
@@ -32,22 +32,24 @@
             </button>
         </div>
 
-        <!-- mobile menu
-        <div class="mobile-menu" id="mbl-menu">
-            <a>Home</a>
-            <a>Categories</a>
-            <a>leaderboard</a>
+        <!-- logout script -->
 
-            <button id="logn-btn">Login</button>
-            <button>Sign up</button>
-        </div> -->
+        <script>
+            const logoutBtn = document.getElementById('logout-btn');
+            logoutBtn.addEventListener('click', () => {
+                alert("Are you sure to logout your account?");
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = '../index.html'; // adjust path if needed
+            });
+
+        </script>
 
     </header>
     <hr>
 
     <!-- Body -->
 
-    <h2 style="text-align: center;font-family: inherit; margin-top: 90px;color: white;">Welcome</h2>
+    <h2 style="text-align: center;font-family: inherit; margin-top: 40px;color: white;">Welcome</h2>
     <h2 class="welcome-text">Explore Main Exam Categories</h2>
 
     <div class="provide-catogories">
@@ -112,7 +114,7 @@
             </p>
             <p class="card-info"><span class="label">Stages:</span>CBT 1 → CBT 2 → Typing/Aptitude Test</p>
             <p class="card-info"><span class="label">Focus:</span>General Awareness, Mathematics, Reasoning</p>
-            <p class="card-info"><span class="label">Career:</span>Secure technical and non-technical roles in Indian
+            <p class="card-info"><span class="label">Career:</span>Technical and non-technical roles in Indian
                 Railways</p>
         </div>
 
@@ -124,7 +126,7 @@
             <p class="card-info"><span class="label">Posts:</span>Probationary Officer (PO), Specialist Officer
                 (SO),Clerk</p>
             <p class="card-info"><span class="label">Stages:</span> Prelims → Mains → Interview (for PO)</p>
-            <p class="card-info"><span class="label">Focus:</span> Quantitative Aptitude, Reasoning, English, Banking
+            <p class="card-info"><span class="label">Focus:</span> Quantitative Aptitude, Reasoning, Banking
                 Awareness</p>
             <p class="card-info"><span class="label">Career:</span> Financial Analyst, Bank Manager, or Operations
                 Officer</p>
@@ -218,17 +220,6 @@
         </div>
 
     </div>
-
-    <!-- logout script -->
-
-    <script>
-        const logoutBtn = document.getElementById('logout-btn');
-
-        logoutBtn.addEventListener('click', () => {
-            localStorage.removeItem('isLoggedIn');
-            window.location.href = '../index.html'; // adjust path if needed
-        });
-    </script>
 
     <footer class="footer">
 

@@ -17,7 +17,7 @@ body {
     line-height: 1.5;
     border-radius: 10px;
     padding: 10px;
-    height: 260px;
+    height: 280px;
     width: 420px;
     background-color: #18223c;
     backdrop-filter: blur(10px);
@@ -98,7 +98,7 @@ body {
 
 .records {
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-top: 0;
     display: flex;
     flex-direction: row;
