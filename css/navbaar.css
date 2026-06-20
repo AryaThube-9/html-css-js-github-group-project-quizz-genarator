@@ -3,6 +3,10 @@
     justify-content: space-between;
     background-color: #0F172A;
     padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+   
 }
 
 * {
@@ -25,7 +29,7 @@
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 95px;
+    gap: 85px;
     font-size: 20px;
     font-weight: 500;
     color: #F8FAFC;
@@ -48,6 +52,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    margin-right: 70px;
 
 
 }
@@ -91,7 +96,7 @@ body {
     display: none;
 }
 
-@media (max-width:768px) {
+/*@media (max-width:768px) {
 
     .menu-btn {
         display: block;
@@ -115,7 +120,68 @@ body {
     }
 
 
+}*/
+
+
+
+.menu-toggle{
+    display: none;
 }
+
+/* Hide hamburger on desktop */
+.humburger{
+    display: none;
+}
+@media screen and (max-width:768px){
+
+    .main-box-navbar{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    /* Show hamburger icon */
+    .humburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .humburger img{
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Hide menu and login button initially */
+    .nav-links,
+    .login-button-contaner{
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    /* Show menu when checkbox is checked */
+    .menu-toggle:checked ~ .nav-links{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-toggle:checked ~ .login-button-contaner{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .nav-links a{
+        display: block;
+        font-size: 16px;
+    }
+}
+
+
 
 .modal {
     display:none;
