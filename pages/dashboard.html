@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/NavBar.css">
+    <link rel="stylesheet" href="../css/navbaar.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/footer.css">
     <title>Document</title>
@@ -16,19 +16,23 @@
 
             <div class="logo-contaner"> <span>Quizz Master</span></div>
 
-            <div class="menu-btn" id="menu-btn"><img src="./images/humbergear-menu.svg" height="30px"></div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <label for="menu-toggle" class="humburger">
+                <img src="./images/humbergear-menu.svg" alt="menu">
+            </label>
 
             <div class="nav-links" id="links"><a href="../pages/dashboard.html" id="dashboard-link">Dashboard</a>
                 <a href="../pages/categories.html" id="Categories-link">Categories</a>
                 <a href="../pages/leaderboard.html" id="leaderboard-link">leaderboard</a>
                 <a href="../pages/contact-us.html">Contact</a>
             </div>
-            <div class="login-button-contaner">
-                <button type="button" class="login-btn" id="logn-btn" onclick="goHome()"><a>Logout</a></button>
-            </div>
+            <button type="button" class="login-btn" id="logout-btn">
+                Logout
+            </button>
         </div>
 
-        <!--mobile menu-->
+        <!-- mobile menu
         <div class="mobile-menu" id="mbl-menu">
             <a>Home</a>
             <a>Categories</a>
@@ -36,14 +40,14 @@
 
             <button id="logn-btn">Login</button>
             <button>Sign up</button>
-        </div>
+        </div> -->
 
     </header>
     <hr>
 
     <!-- Body -->
 
-    <h2 class="welcome-text">Welcome</h2>
+    <h2 style="text-align: center;font-family: inherit; margin-top: 90px;color: white;">Welcome</h2>
     <h2 class="welcome-text">Explore Main Exam Categories</h2>
 
     <div class="provide-catogories">
@@ -51,12 +55,12 @@
             <h3>UPSC</h3>
             <p style="text-align: center;">UPSC (Union Public Service Commission)</p>
             <br>
-            <p class="card-info"><span class="label">Level:</span> National</p>
-            <p class="card-info"><span class="label">Posts:</span> IAS, IPS, IFS, IRS, etc.</p>
-            <p class="card-info"><span class="label">Stages:</span> Prelims → Mains → Interview</p>
-            <p class="card-info"><span class="label">Focus:</span> General Studies, Current Affairs, Essay, Optional
+            <p class="card-info"><span class="label">Level:</span>National</p>
+            <p class="card-info"><span class="label">Posts:</span>IAS, IPS, IFS, IRS, etc.</p>
+            <p class="card-info"><span class="label">Stages:</span>Prelims → Mains → Interview</p>
+            <p class="card-info"><span class="label">Focus:</span>General Studies, Current Affairs, Essay, Optional
                 Subject</p>
-            <p class="card-info"><span class="label">Career:</span> Top administrative and policy-making roles in India
+            <p class="card-info"><span class="label">Career:</span>Top administrative and policy-making roles in India
             </p>
         </div>
 
@@ -64,11 +68,11 @@
             <h3>MPSC</h3>
             <p style="text-align: center;">MPSC (Maharashtra Public Service Commission) </p>
             <br>
-            <p class="card-info"><span class="label">Level:</span> State (Maharashtra)</p>
-            <p class="card-info"><span class="label">Posts:</span> Deputy Collector, DYSP, Tehsildar, BDO</p>
-            <p class="card-info"><span class="label">Stages:</span> Prelims → Mains → Interview</p>
-            <p class="card-info"><span class="label">Focus:</span> Maharashtra History & Geography, Polity, Marathi</p>
-            <p class="card-info"><span class="label">Career:</span> State-level administration and gazetted government
+            <p class="card-info"><span class="label">Level:</span>State (Maharashtra)</p>
+            <p class="card-info"><span class="label">Posts:</span>Deputy Collector, DYSP, Tehsildar, BDO</p>
+            <p class="card-info"><span class="label">Stages:</span>Prelims → Mains → Interview</p>
+            <p class="card-info"><span class="label">Focus:</span>Maharashtra History & Geography, Polity, Marathi</p>
+            <p class="card-info"><span class="label">Career:</span>State-level administration and gazetted government
                 posts</p>
         </div>
 
@@ -76,11 +80,11 @@
             <h3>NEET</h3>
             <p style="text-align: center;">NEET (National Eligibility cum Entrance Test) </p>
             <br>
-            <p class="card-info"><span class="label">Level:</span> National</p>
-            <p class="card-info"><span class="label">Field:</span> Medical (MBBS, BDS, BAMS, BHMS)</p>
-            <p class="card-info"><span class="label">Stages:</span> Single Objective Entrance Exam</p>
-            <p class="card-info"><span class="label">Focus:</span> Biology (Botany & Zoology), Physics, Chemistry</p>
-            <p class="card-info"><span class="label">Career:</span> Doctor, Surgeon, Dentist, or Medical Professional
+            <p class="card-info"><span class="label">Level:</span>National</p>
+            <p class="card-info"><span class="label">Field:</span>Medical (MBBS, BDS, BAMS, BHMS)</p>
+            <p class="card-info"><span class="label">Stages:</span>Single Objective Entrance Exam</p>
+            <p class="card-info"><span class="label">Focus:</span>Biology (Botany & Zoology), Physics, Chemistry</p>
+            <p class="card-info"><span class="label">Career:</span>Doctor, Surgeon, Dentist, or Medical Professional
             </p>
         </div>
     </div>
@@ -90,11 +94,11 @@
             <h3>JEE</h3>
             <p style="text-align: center;">JEE (Joint Entrance Examination)</p>
             <br>
-            <p class="card-info"><span class="label">Level:</span> National</p>
-            <p class="card-info"><span class="label">Field:</span> Engineering (IITs, NITs, IIITs, GFTIs)</p>
-            <p class="card-info"><span class="label">Stages:</span> JEE Main → JEE Advanced</p>
-            <p class="card-info"><span class="label">Focus:</span> Mathematics, Physics, Chemistry</p>
-            <p class="card-info"><span class="label">Career:</span> Software Engineer, Data Scientist, Tech Researcher
+            <p class="card-info"><span class="label">Level:</span>National</p>
+            <p class="card-info"><span class="label">Field:</span>Engineering (IITs, NITs, IIITs, GFTIs)</p>
+            <p class="card-info"><span class="label">Stages:</span>JEE Main → JEE Advanced</p>
+            <p class="card-info"><span class="label">Focus:</span>Mathematics, Physics, Chemistry</p>
+            <p class="card-info"><span class="label">Career:</span>Software Engineer, Data Scientist, Tech Researcher
             </p>
 
         </div>
@@ -103,12 +107,12 @@
             <h3>RAILWAY</h3>
             <p style="text-align: center;">Railway Recruitment (RRB Exams)</p>
             <br>
-            <p class="card-info"><span class="label">Level:</span> National</p>
-            <p class="card-info"><span class="label">Posts:</span> Station Master, Goods Guard, Clerk, Ticket Examiner
+            <p class="card-info"><span class="label">Level:</span>National</p>
+            <p class="card-info"><span class="label">Posts:</span> tation Master, Goods Guard, Clerk, Ticket Examiner
             </p>
-            <p class="card-info"><span class="label">Stages:</span> CBT 1 → CBT 2 → Typing/Aptitude Test</p>
-            <p class="card-info"><span class="label">Focus:</span> General Awareness, Mathematics, Reasoning</p>
-            <p class="card-info"><span class="label">Career:</span> Secure technical and non-technical roles in Indian
+            <p class="card-info"><span class="label">Stages:</span>CBT 1 → CBT 2 → Typing/Aptitude Test</p>
+            <p class="card-info"><span class="label">Focus:</span>General Awareness, Mathematics, Reasoning</p>
+            <p class="card-info"><span class="label">Career:</span>Secure technical and non-technical roles in Indian
                 Railways</p>
         </div>
 
@@ -116,9 +120,9 @@
             <h3>BANKING</h3>
             <p style="text-align: center;">Banking Exams (IBPS, SBI, RBI)</p>
             <br>
-            <p class="card-info"><span class="label">Level:</span> National</p>
-            <p class="card-info"><span class="label">Posts:</span> Probationary Officer (PO), Specialist Officer (SO),
-                Clerk</p>
+            <p class="card-info"><span class="label">Level:</span>National</p>
+            <p class="card-info"><span class="label">Posts:</span>Probationary Officer (PO), Specialist Officer
+                (SO),Clerk</p>
             <p class="card-info"><span class="label">Stages:</span> Prelims → Mains → Interview (for PO)</p>
             <p class="card-info"><span class="label">Focus:</span> Quantitative Aptitude, Reasoning, English, Banking
                 Awareness</p>
@@ -128,7 +132,7 @@
     </div>
     <div class="categories-button">
 
-        <a href="#"><button type="button">Click Here To Select Quiz</button></a>
+        <a href="../pages/categories.html"><button type="button">Click Here To Select Quiz</button></a>
     </div>
 
     <div class="records">
@@ -218,10 +222,12 @@
     <!-- logout script -->
 
     <script>
-        function goHome() {
-            alert("Do You Want To Logout Your Account?");
-            window.location.href = "../index.html";
-        }
+        const logoutBtn = document.getElementById('logout-btn');
+
+        logoutBtn.addEventListener('click', () => {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = '../index.html'; // adjust path if needed
+        });
     </script>
 
     <footer class="footer">
