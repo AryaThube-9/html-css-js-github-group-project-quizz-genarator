@@ -260,4 +260,43 @@
 
 /*resposive code for stats section*/
 
+
+
+.stats-section{
+    padding: 30px 20px;
 }
+
+.stats-heading{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.stats-heading img{
+    height: 25px;
+}
+
+.stats-container{
+    gap: 20px;
+}
+
+.stat-card{
+    width: 45%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.stat-card h3{
+    font-size: 1.8rem;
+}
+
+.stat-card p{
+    font-size: 0.9rem;
+}
+
+/*resposive code for category card*/
+
+
+
+
+}
+
