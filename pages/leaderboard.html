@@ -1,60 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
     <link rel="stylesheet" href="./../css/leaderboard.css">
+    <link rel="stylesheet" href="./../css/navbaar.css">
     <link rel="stylesheet" href="./../css/footer.css">
-
-
 </head>
-
-<section class="leaderboard-section">
-    <h2>🏆 Leaderboard</h2>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Name</th>
-                <th>Score</th>
-            </tr>
-        </thead>
-
-        <tbody id="leaderboardBody">
-
-        </tbody>
-    </table>
-</section>
-
-
-
 <body>
 
+    <header>
+        <div class="main-box-navbar">
+
+            <div class="logo-contaner"> <span>Quizz Master</span></div>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <label for="menu-toggle" class="humburger">
+                <img src="../images/humbergear-menu.svg" alt="menu">
+            </label>
+
+            <div class="nav-links" id="links"><a href="../pages/dashboard.html" id="dashboard-link">Dashboard</a>
+                <a href="../pages/categories.html" id="Categories-link">Categories</a>
+                <a href="../pages/leaderboard.html" id="leaderboard-link">leaderboard</a>
+                <a href="../pages/contact-us.html">Contact</a>
+            </div>
+            <button type="button" class="login-btn" id="logout-btn">
+                Logout
+            </button>
+        </div>
+
+        <!-- logout script -->
+
+        <script>
+            const logoutBtn = document.getElementById('logout-btn');
+            logoutBtn.addEventListener('click', () => {
+                alert("Are you sure to logout your account?");
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = '../index.html'; // adjust path if needed
+            });
+
+        </script>
+
+    </header>
+    <hr>
+
+    <div class="container">
+        <h1 class="heading">
+            <img src="./../images/trophy.png" class="trophy" alt="Trophy">
+            Quiz Generator Leaderboard
+        </h1>
+        
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="btn-box">
+            <button class="clear-btn" onclick="clearLeaderboard()">Clear Leaderboard</button>
+            <button class="back-btn" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+        </div>
+    </div>
+
     <script>
+        
+        let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
 
-    const leaderboardBody = document.getElementById("leaderboardBody");
+        
+        leaderboard.sort((a, b) => b.score - a.score);
 
-let leaderboard =
-JSON.parse(localStorage.getItem("leaderboard")) || [];
+        const tbody = document.getElementById("leaderboardBody");
+        tbody.innerHTML = ""; 
 
-// Highest score first
-leaderboard.sort((a,b)=> b.score - a.score);
+        
+        leaderboard.forEach((player, index) => {
+            let rank = index + 1;
+            let rankDisplay = "";
 
-leaderboard.forEach((player,index)=>{
+        
+            if (rank === 1) {
+                rankDisplay = `<img src="./../images/gold-medal.png" class="medal" alt="1st Place">`;
+            } else if (rank === 2) {
+                rankDisplay = `<img src="./../images/silver-medal.png" class="medal" alt="2nd Place">`;
+            } else if (rank === 3) {
+                rankDisplay = `<img src="./../images/bronze-medal.png" class="medal" alt="3rd Place">`;
+            } else {
+                rankDisplay = `<span class="rank-number">${rank}</span>`;
+            }
 
-    leaderboardBody.innerHTML += `
-        <tr>
-            <td>${index + 1}</td>
-            <td>${player.name}</td>
-            <td>${player.score}</td>
-        </tr>
-    `;
-});   
- 
+            
+            tbody.innerHTML += `
+            <tr>
+                <td>${rankDisplay}</td>
+                <td class="player-name">${player.name}</td>
+                <td class="player-score">${player.score} points</td>
+            </tr>
+            `;
+        });
 
-   </script>
+        
+        function clearLeaderboard() {
+            if (confirm("Are you sure you want to clear all real-time leaderboard history?")) {
+                localStorage.removeItem("leaderboard");
+                location.reload();
+            }
+        }
+    </script>
+
+
+ <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h2 class="footer-logo">Quiz Master</h2>
+                <p>
+                    Challenge your knowledge, track your progress,
+                    and compete with quiz enthusiasts worldwide.
+                </p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+
+                <a href="../index.html">Home</a>
+                <a href="./dashboard.html">Dashboard</a>
+                <a href="./categories.html">Categories</a>
+                <a href="./leaderboard.html">Leaderboard</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+
+                <p>
+                    <a href="mailto:quizmaster@gmail.com">
+                        <img src="./../images/mail-icon.png" alt="Mail" height="28">
+                        quizmaster@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <a href="tel:+919876543210">
+                        <img src="./../images/call-icon.png" alt="Call" height="28">
+                        +91 9876543210
+                    </a>
+                </p>
+
+                <p>
+                    <a href="https://maps.app.goo.gl/2eyyGiFhzCetyrBe6" target="_blank">
+                        <img src="./../images/location-icon.png" alt="Location" height="28">
+                        Pune, India
+                    </a>
+                </p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+
+                <a href="https://github.com/" target="_blank">
+                    <img src="./../images/git-hub-icon.png" alt="GitHub" height="28">
+                    GitHub
+                </a>
+
+                <a href="https://in.linkedin.com/" target="_blank">
+                    <img src="./../images/linkedin-icon.png" alt="LinkedIn" height="28">
+                    LinkedIn
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./../images/insta-icon.png" alt="Instagram" height="28">
+                    Instagram
+                </a>
+
+                <a href="https://x.com/" target="_blank">
+                    <img src="./../images/twitter-icon.png" alt="Twitter" height="28">
+                    Twitter
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Quiz Master | All Rights Reserved</p>
+        </div>
+
+    </footer>
+
 
 </body>
 

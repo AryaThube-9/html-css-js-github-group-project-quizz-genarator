@@ -1,24 +1,136 @@
-.leaderboard-section{
-    padding:40px;
-    color:white;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:#18223c;
+body {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    min-height: 100vh;
+    padding: 40px 20px;
 }
 
-th,td{
-    padding:15px;
-    text-align:center;
-    border-bottom:1px solid #444;
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-th{
-    background:#6366F1;
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 30px;
 }
 
-tr:hover{
-    background:#24304f;
+.trophy {
+    height: 50px;
+    width: auto;
+}
+
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 16px 24px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+
+.medal {
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.rank-number {
+    font-weight: bold;
+    color: #4b5563;
+    padding-left: 8px;
+}
+
+.player-name {
+    font-weight: 500;
+    color: #111827;
+}
+
+.player-score {
+    font-weight: 600;
+    color: #059669; 
+}
+
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-box button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.clear-btn {
+    background-color: #ef4444;
+    color: white;
+}
+
+.clear-btn:hover {
+    background-color: #dc2626;
+}
+
+.back-btn {
+    background-color: #4b5563;
+    color: white;
+}
+
+.back-btn:hover {
+    background-color: #374151;
+}
+
+.btn-box button:active {
+    transform: scale(0.98);
 }
