@@ -18,6 +18,7 @@ body {
 }
 
 .hero h1 {
+    margin-top: 50px;
     font-size: 30px;
     margin-bottom: 15px;
     font-weight: 700;
@@ -152,6 +153,18 @@ textarea {
 }
 
 /* FAQ Section */
+.question-cards1 {
+    background: #18223c;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 3px 10px rgb(247, 245, 245);
+}
+
+.question-cards1:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
 
 .question-section-container {
     width: 90%;
