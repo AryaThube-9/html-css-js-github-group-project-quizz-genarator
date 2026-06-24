@@ -26,7 +26,7 @@
           <div class="nav-links" id="links"><a href="./pages/dashboard.html" id="dashboard-link">Dashboard</a>
                 <a href="./pages/categories.html" id="Categories-link">Categories</a>
                 <a href="./pages/leaderboard.html" id="leaderboard-link">leaderboard</a>
-                <a href="./pages/contact-us.html" target="_blank">Contact</a>
+                <a href="./pages/contact-us.html">Contact</a>
             </div>
             <div class="login-button-contaner">
                 <button type="button" class="login-btn" id="logn-btn"><a>Login</a></button>
@@ -91,10 +91,25 @@
 
                     <input type="email" id="email" placeholder="Email">
 
-                    <input type="password" id="password" placeholder="Password">
+                  <div class="signup-password-box">
+    <input type="password"
+           id="signup-password"
+           placeholder="Password">
 
-                    <input type="password" placeholder="confirm password">
+    <img src="./images/hidden-img.png"
+         id="toggleSignupPassword"
+         class="signup-toggle-password">
+</div>
 
+<div class="signup-password-box">
+    <input type="password"
+           id="confirm-password"
+           placeholder="Confirm Password">
+
+    <img src="./images/hidden-img.png"
+         id="toggleConfirmPassword"
+         class="signup-toggle-password">
+</div>
                     <button type="submit">
                         Create account
                     </button>
