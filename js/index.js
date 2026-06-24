@@ -252,6 +252,42 @@ togglePassword.addEventListener("click", () => {
     }
 });
 
+const signupPassword =
+document.getElementById("signup-password");
+
+const toggleSignupPassword =
+document.getElementById("toggleSignupPassword");
+
+toggleSignupPassword.addEventListener("click", () => {
+
+    if(signupPassword.type === "password"){
+        signupPassword.type = "text";
+        toggleSignupPassword.src ="./images/view-img.png";
+    }else{
+        signupPassword.type = "password";
+        toggleSignupPassword.src ="./images/hidden.png";
+    }
+
+});
+
+const confirmPassword =
+document.getElementById("confirm-password");
+
+const toggleConfirmPassword =
+document.getElementById("toggleConfirmPassword");
+
+toggleConfirmPassword.addEventListener("click", () => {
+
+    if(confirmPassword.type === "password"){
+        confirmPassword.type = "text";
+        toggleConfirmPassword.src ="./images/view-img.png";
+
+    }else{
+        confirmPassword.type = "password";
+        toggleConfirmPassword.src ="./images/hidden-img.png";
+    }
+
+});
 const themeIcon = document.getElementById("themeIcon");
 
 themeIcon.addEventListener("click", () => {

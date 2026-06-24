@@ -2,7 +2,8 @@
 
  
 ##  Live Demo
-[Live website :](https://quizz-master-web.netlify.app/)
+Live 
+website : (https://quizz-master-web.netlify.app/)
 
 ---
 
@@ -66,7 +67,11 @@ Quiz-Master/
 
 ### Home Page
 
-![home page](./images/)
+![home page](./images/homepage.png)
+
+### category page
+
+![category page](./images/category.png)
 
 ---
 
