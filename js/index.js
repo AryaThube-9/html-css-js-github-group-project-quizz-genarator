@@ -70,7 +70,7 @@
     document.getElementById("email").value;
 
     const password =
-    document.getElementById("password").value;
+    document.querySelectorAll("password").value;
 
     let users =
     JSON.parse(localStorage.getItem("users"))
