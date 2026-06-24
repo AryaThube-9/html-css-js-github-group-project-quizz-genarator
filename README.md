@@ -2,7 +2,7 @@
 
  
 ##  Live Demo
-[Live website :](https://yourwebsite.com)
+[Live website :](https://quizz-master-web.netlify.app/)
 
 ---
 

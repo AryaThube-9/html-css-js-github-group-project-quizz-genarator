@@ -235,3 +235,52 @@
 
         });
         });
+
+       
+        const togglePassword = document.getElementById("togglePassword");
+const passwordInput = document.getElementById("lgn-pswrd");
+
+togglePassword.addEventListener("click", () => {
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text"; // Show password
+        togglePassword.src = "./images/view-img.png";
+       
+    }
+    else{
+         passwordInput.type = "password"; // Hide password
+        togglePassword.src = "./images/hide-img.png"; // Change icon
+    }
+});
+
+const themeIcon = document.getElementById("themeIcon");
+
+themeIcon.addEventListener("click", () => {
+
+    document.querySelector(".modal-ctn")
+        .classList.toggle("dark-theme");
+
+});
+       
+const icons =
+document.querySelectorAll(".theme-icon");
+
+icons.forEach(icon => {
+
+    icon.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark-mode");
+
+        icons.forEach(i => {
+
+            if(document.body.classList.contains("dark-mode")){
+                i.src = "./images/sun.png";
+            }
+            else{
+                i.src = "./images/moon.png";
+            }
+
+        });
+
+    });
+
+});

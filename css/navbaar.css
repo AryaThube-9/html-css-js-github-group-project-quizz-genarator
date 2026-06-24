@@ -55,6 +55,28 @@
 
 
 }
+.password-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px; /* Icon ke liye space */
+    font-size: 16px;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 25px;
+    bottom: 18px;
+}
 
 .login-button-contaner {
     display: flex;
@@ -244,7 +266,7 @@ body {
 
 .modal-ctn h2 {
     margin-bottom: 28px;
-
+position: relative;
     margin-left: 10px;
     text-align: center;
     font-family: sans-serif;
@@ -462,4 +484,55 @@ body {
 
 
 
+}
+
+.theme-icon{
+    cursor:pointer;
+    position: absolute;
+    top: 30px;
+    right: 8px;
+    z-index: 100;
+}
+
+/* Signup Form Dark Mode */
+
+.dark-mode .modal-content{
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .modal-content h2{
+    color: white;
+}
+
+.dark-mode .modal-content input{
+    background-color: #333;
+    color: white;
+    border: 1px solid #777;
+}
+
+.dark-mode .modal-content input::placeholder{
+    color: #ccc;
+}
+
+.dark-mode .modal-content p,
+.dark-mode .modal-content a{
+    color: white;
+}
+.dark-theme{
+    background:#1f1f1f !important;
+    color:white !important;
+}
+
+.dark-theme input{
+    background:#333 !important;
+    color:white !important;
+    border:1px solid #555 !important;
+}
+
+.dark-theme h2,
+.dark-theme label,
+.dark-theme p,
+.dark-theme a{
+    color:white !important;
 }
